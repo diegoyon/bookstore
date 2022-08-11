@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route, Link,
+} from 'react-router-dom';
 import Books from './Books';
 import Categories from './Categories';
 
