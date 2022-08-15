@@ -1,14 +1,14 @@
 // Initial State
 const defaultState = [
   {
-    id: 1,
     title: 'Harry Potter',
     author: 'J.K. Rowling',
+    id: '1',
   },
   {
-    id: 2,
     title: 'Lord of the Rings',
     author: 'J.R.R. Tolkien',
+    id: '2',
   },
 ];
 

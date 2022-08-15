@@ -8,7 +8,14 @@ const Books = () => {
   return (
     <>
       <h1>Book List</h1>
-      {booklist.map((book) => (<Book key={book.id} title={book.title} author={book.author} />))}
+      {booklist.map((book) => (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+          id={book.id}
+        />
+      ))}
       <Form />
     </>
   );
