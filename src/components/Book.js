@@ -10,10 +10,9 @@ const Book = (props) => {
     <>
       <h2>{title}</h2>
       <h3>{author}</h3>
-      <p>{title}</p>
       <button
         onClick={() => {
-          dispatch(removeBook({ title, author, id }));
+          dispatch(removeBook({ id }));
         }}
         type="button"
       >
