@@ -1,5 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
-import booksReducer from './books/books'
-import categoriesReducer from './categories/categories'
+import { configureStore } from '@reduxjs/toolkit';
+import booksReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
-const store = configureStore({ booksReducer, categoriesReducer })
+/* eslint-disable no-unused-vars */
+const store = configureStore({ booksReducer, categoriesReducer });

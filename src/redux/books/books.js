@@ -6,10 +6,10 @@ const REMOVE = 'REMOVE';
 export default function booksReducer(state = [], action = {}) {
   switch (action.type) {
     case CREATE:
-      return state.concat([action.book])
+      return state.concat([action.book]);
     case REMOVE:
-      return state.filter(book => JSON.stringify(book)!==JSON.stringify(action.book))
-    default: 
+      return state.filter((book) => JSON.stringify(book) !== JSON.stringify(action.book));
+    default:
       return state;
   }
 }
