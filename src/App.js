@@ -1,8 +1,8 @@
 import {
   BrowserRouter as Router, Routes, Route, Link,
 } from 'react-router-dom';
-import Books from './Books';
-import Categories from './Categories';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
 
 function App() {
   return (
