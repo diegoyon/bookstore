@@ -4,7 +4,8 @@ import Book from '../components/Book';
 import Form from '../components/Form';
 
 const Books = () => {
-  const booklist = useSelector((state) => state.books);
+  const booklist = useSelector((state) => state.books.books);
+  // console.log(booklist);
   return (
     <>
       <h1>Book List</h1>

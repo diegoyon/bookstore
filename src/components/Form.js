@@ -1,7 +1,7 @@
 import { useState, React } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { createBook } from '../redux/books/books';
+import { create } from '../redux/books/bookSlice';
 
 const Form = () => {
   const [titleInput, setTitleInput] = useState('');
@@ -14,7 +14,7 @@ const Form = () => {
       <input type="text" name="author" value={authorInput} onInput={(e) => setAuthorInput(e.target.value)} />
       <button
         onClick={() => {
-          dispatch(createBook({ title: titleInput, author: authorInput, id: uuidv4() }));
+          dispatch(create({ title: titleInput, author: authorInput, id: uuidv4() }));
           setTitleInput('');
           setAuthorInput('');
         }}
