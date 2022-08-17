@@ -9,18 +9,22 @@ import Axios from 'axios';
 // );
 // Initial State
 const defaultState = [];
-// const defaultState = [
-//   {
-//     title: 'Harry Potter',
-//     author: 'J.K. Rowling',
-//     id: '1',
-//   },
-//   {
-//     title: 'Lord of the Rings',
-//     author: 'J.R.R. Tolkien',
-//     id: '2',
-//   },
-// ];
+// const defaultState = {
+//   item2: [
+//     {
+//       author: 'Tolkien',
+//       category: 'Fiction',
+//       title: 'LOTR',
+//     },
+//   ],
+//   item1: [
+//     {
+//       title: 'The Great Gatsby',
+//       author: 'John Smith',
+//       category: 'Fiction',
+//     },
+//   ],
+// };
 
 // Actions
 const CREATE = 'CREATE';
@@ -54,7 +58,7 @@ export const fetchBooks = () => (
   async (dispatch) => {
     const res = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LBqO0RnKgQ1tgzEIoMmX/books');
     // const jsonResponse = await res.json();
-    console.log(res.data);
+    // console.log(res.data);
     dispatch({
       type: GET_BOOKS,
       payload: res.data,
