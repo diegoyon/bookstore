@@ -1,24 +1,20 @@
-import { useEffect, React } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks } from '../redux/books/books';
+// import { useEffect, React } from 'react';
+import { React } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+// import { fetchBooks } from '../redux/books/books';
 // import Book from '../components/Book';
 import Form from '../components/Form';
 
 const Books = () => {
   const booklist = useSelector((state) => state.books);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, []);
-  // console.log(booklist.item1);
-  // console.log(inbooks);
-  // console.log('booklist:');
+  // useEffect(() => {
+  //   dispatch(fetchBooks());
+  // }, []);
+
   console.log(booklist);
-  // console.log(booklist[0].item1);
-  // Object.keys(booklist).forEach((key) => {
-  //   console.log(booklist[key]);
-  // });
 
   return (
     <>

@@ -1,5 +1,5 @@
 // import { createAsyncThunk } from '@reduxjs/toolkit';
-import Axios from 'axios';
+import axios from 'axios';
 // const fetchBooks = createAsyncThunk(
 //   'fetchBooks',
 //   async () => {
@@ -56,7 +56,7 @@ export function removeBook(book) {
 
 export const fetchBooks = () => (
   async (dispatch) => {
-    const res = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LBqO0RnKgQ1tgzEIoMmX/books');
+    const res = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LBqO0RnKgQ1tgzEIoMmX/books');
     // const jsonResponse = await res.json();
     // console.log(res.data);
     dispatch({
