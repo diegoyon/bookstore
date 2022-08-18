@@ -15,27 +15,26 @@ const Books = () => {
   const booklist = useSelector(selectAllBooks);
   const booksStatus = useSelector(getBooksStatus);
   const error = useSelector(getBooksError);
-
   useEffect(() => {
     if (booksStatus === 'idle') {
       dispatch(fetchBooks());
     }
   }, [booksStatus, dispatch]);
-  /* eslint-disable */
+
   let content;
 
   if (booksStatus === 'loading') {
     content = <p>Loading...</p>;
   } else if (booksStatus === 'succeeded') {
-    let keys = Object.keys(booklist[0]);
-    let dis = [];
-    keys.forEach( object => {
+    const keys = Object.keys(booklist[0]);
+    const dis = [];
+    keys.forEach((object) => {
       dis.push({
         id: object,
         author: booklist[0][object][0].author,
-        title: booklist[0][object][0].title
-      })
-    })
+        title: booklist[0][object][0].title,
+      });
+    });
     content = dis.map((book) => (
       <Book
         key={book.id}
@@ -43,7 +42,7 @@ const Books = () => {
         author={book.author}
         id={book.id}
       />
-    ))
+    ));
   } else if (booksStatus === 'failed') {
     content = <p>{error}</p>;
   }
