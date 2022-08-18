@@ -18,11 +18,17 @@
 .form-container{
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .form-container input{
+  font-family: 'Montserrat', sans-serif;
   padding: 0.8rem;
   width: 25rem;
+}
+
+.form-container input::placeholder{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-container button{
@@ -33,4 +39,10 @@
   border-radius: 3px;
   padding: 1.18rem 4.375rem;
   border: none;
+}
+
+.form-container select{
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.8rem;
+  width: 15rem;
 }

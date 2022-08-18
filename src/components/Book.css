@@ -61,6 +61,10 @@
   color: #4386bf;
 }
 
+.book-card img {
+  height: 4.25rem;
+}
+
 .second-column{
   display: flex;
   gap: 1rem;

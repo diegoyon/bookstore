@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import './Book.css';
+import progressImg from '../images/progress.png';
 
 const Book = (props) => {
   const {
@@ -32,7 +33,7 @@ const Book = (props) => {
           </div>
         </div>
         <div className="second-column">
-          <p>progress image</p>
+          <img src={progressImg} alt="progress" />
           <div className="progress">
             <h1>64%</h1>
             <h2>Completed</h2>
