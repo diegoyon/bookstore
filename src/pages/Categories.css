@@ -1,0 +1,25 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin: 2.313rem 6.25rem;
+  border: solid 1px #e8e8e8;
+  background-color: white;
+  height: 10rem;
+  font-family: 'Roboto Slab', serif;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 0 1.688rem;
+}
+
+.categories button {
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 1.18rem 4.375rem;
+  border: none;
+  width: 20rem;
+  margin: 0 auto;
+}
