@@ -1,29 +1,30 @@
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #121212;
-  font-size: 0.813rem;
-}
-
-h1 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  color: #0290ff;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.813rem 6.25rem;
-  min-width: 1200px;
+  min-width: 85rem;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 2.375rem;
   border: solid 1px #e8e8e8;
+  background-color: white;
 }
 
 .links {
   display: flex;
   align-items: center;
   gap: 2.5rem;
+}
+
+.nav h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #121212;
+  font-size: 0.813rem;
 }

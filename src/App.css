@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #f5f6fa;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto Slab', serif;
