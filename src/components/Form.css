@@ -9,29 +9,29 @@
   gap: 1.2rem;
 }
 
-.form h1{
+.form h1 {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #888888;
+  color: #888;
 }
 
-.form-container{
+.form-container {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.form-container input{
+.form-container input {
   font-family: 'Montserrat', sans-serif;
   padding: 0.8rem;
   width: 25rem;
 }
 
-.form-container input::placeholder{
+.form-container input::placeholder {
   font-family: 'Montserrat', sans-serif;
 }
 
-.form-container button{
+.form-container button {
   font-size: 1rem;
   font-weight: normal;
   color: white;
@@ -41,7 +41,7 @@
   border: none;
 }
 
-.form-container select{
+.form-container select {
   font-family: 'Montserrat', sans-serif;
   padding: 0.8rem;
   width: 15rem;

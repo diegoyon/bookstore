@@ -11,11 +11,22 @@
   padding: 0 1.688rem;
 }
 
-.book-card button{
+.book-card button {
   border: none;
   background-color: white;
   cursor: pointer;
   padding-right: 0.5rem;
+}
+
+.buttons button {
+  color: #4386bf;
+}
+
+.third-column button {
+  background-color: #0290ff;
+  padding: 0.5rem 1.375rem;
+  color: white;
+  border-radius: 3px;
 }
 
 .book-card button:nth-child(1),
@@ -28,7 +39,7 @@
   padding-left: 0.5rem;
 }
 
-.first-column{
+.first-column {
   display: flex;
   flex-direction: column;
   gap: 1.313rem;
@@ -36,10 +47,6 @@
 
 .buttons {
   display: flex;
-}
-
-.buttons button {
-  color: #4386bf;
 }
 
 .book-card h1 {
@@ -65,13 +72,13 @@
   height: 4.25rem;
 }
 
-.second-column{
+.second-column {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.progress{
+.progress {
   display: flex;
   flex-direction: column;
 }
@@ -90,26 +97,19 @@
   color: #121212;
 }
 
-.third-column{
+.third-column {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.third-column h1{
+.third-column h1 {
   font-size: 0.813rem;
   font-weight: 300;
 }
 
-.third-column h2{
+.third-column h2 {
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 1rem;
-}
-
-.third-column button{
-  background-color: #0290ff;
-  padding: 0.5rem 1.375rem ;
-  color: white;
-  border-radius: 3px;
 }
