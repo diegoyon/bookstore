@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 2.313rem 6.25rem;
+  border-top: solid 1px #e8e8e8;
+  min-width: 75rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 1.813rem;
+  gap: 1.2rem;
+}
+
+.form h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-container input {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.8rem;
+  width: 25rem;
+}
+
+.form-container input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-container button {
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 1.18rem 4.375rem;
+  border: none;
+}
+
+.form-container select {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.8rem;
+  width: 15rem;
+}

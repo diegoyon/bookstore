@@ -8,6 +8,7 @@ import {
   getBooksError,
   fetchBooks,
 } from '../redux/books/booksSlice';
+// import './Books.css';
 
 const Books = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Books = () => {
         id: object,
         author: booklist[0][object][0].author,
         title: booklist[0][object][0].title,
+        category: booklist[0][object][0].category,
       });
     });
     content = dis.map((book) => (
@@ -40,6 +42,7 @@ const Books = () => {
         key={book.id}
         title={book.title}
         author={book.author}
+        category={book.category}
         id={book.id}
       />
     ));
@@ -49,7 +52,6 @@ const Books = () => {
 
   return (
     <>
-      <h1>Book List</h1>
       {content}
       <Form />
     </>

@@ -1,0 +1,115 @@
+.book-card {
+  display: flex;
+  margin: 2.313rem 6.25rem;
+  border: solid 1px #e8e8e8;
+  background-color: white;
+  min-width: 75rem;
+  height: 10.625rem;
+  font-family: 'Roboto Slab', serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.688rem;
+}
+
+.book-card button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.buttons button {
+  color: #4386bf;
+}
+
+.third-column button {
+  background-color: #0290ff;
+  padding: 0.5rem 1.375rem;
+  color: white;
+  border-radius: 3px;
+}
+
+.book-card button:nth-child(1),
+.book-card button:nth-child(2) {
+  border-right: 1px solid #e8e8e8;
+}
+
+.book-card button:nth-child(2),
+.book-card button:nth-child(3) {
+  padding-left: 0.5rem;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.313rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.book-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-card h2 {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-card h3 {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.book-card img {
+  height: 4.25rem;
+}
+
+.second-column {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #121212;
+}
+
+.progress h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #121212;
+}
+
+.third-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.third-column h1 {
+  font-size: 0.813rem;
+  font-weight: 300;
+}
+
+.third-column h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}

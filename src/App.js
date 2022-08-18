@@ -1,14 +1,15 @@
 import {
-  BrowserRouter as Router, Routes, Route, Link,
+  BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
+import Navbar from './components/Navbar';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <Link to="/">Books</Link>
-      <Link to="/categories">Categories</Link>
+      <Navbar />
       <Routes>
         <Route path="/" exact element={<Books />} />
         <Route path="/categories" exact element={<Categories />} />
