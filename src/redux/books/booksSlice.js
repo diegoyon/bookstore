@@ -9,7 +9,13 @@ export const fetchBooks = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(BOOKS_URL);
-      return response.data;
+      const booksObject = Object.entries(response.data).map(([id, response]) => {
+        const { title, author, category } = response[0];
+        return {
+          id, title, author, category,
+        };
+      });
+      return (booksObject);
     } catch (err) {
       return err.message;
     }
@@ -20,8 +26,10 @@ export const addNewBook = createAsyncThunk(
   'books/addNewBook',
   async (newBook) => {
     try {
-      const response = await axios.post(BOOKS_URL, newBook);
-      return response.data;
+      await axios.post(BOOKS_URL, newBook);
+      const id = newBook.item_id;
+      delete newBook.item_id;
+      return { ...newBook, id };
     } catch (err) {
       return err.message;
     }
@@ -32,8 +40,8 @@ export const removeBook = createAsyncThunk(
   'books/removeBook',
   async (bookId) => {
     try {
-      const response = await axios.delete(`${BOOKS_URL}/${bookId}`);
-      return response.data;
+      await axios.delete(`${BOOKS_URL}/${bookId}`);
+      return bookId;
     } catch (err) {
       return err.message;
     }
@@ -57,17 +65,17 @@ export const booksSlice = createSlice({
       })
       .addCase(fetchBooks.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.books = state.books.concat(action.payload);
+        state.books = action.payload;
       })
       .addCase(fetchBooks.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       })
-      .addCase(addNewBook.fulfilled, () => {
-        window.location.reload(false);
+      .addCase(addNewBook.fulfilled, (state, action) => {
+        state.books = state.books.concat(action.payload);
       })
-      .addCase(removeBook.fulfilled, () => {
-        window.location.reload(false);
+      .addCase(removeBook.fulfilled, (state, action) => {
+        state.books = state.books.filter((book) => book.id !== action.payload);
       });
   },
 });

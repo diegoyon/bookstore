@@ -8,7 +8,7 @@ import {
   getBooksError,
   fetchBooks,
 } from '../redux/books/booksSlice';
-// import './Books.css';
+import './Books.css';
 
 const Books = () => {
   const dispatch = useDispatch();
@@ -27,17 +27,7 @@ const Books = () => {
   if (booksStatus === 'loading') {
     content = <p>Loading...</p>;
   } else if (booksStatus === 'succeeded') {
-    const keys = Object.keys(booklist[0]);
-    const dis = [];
-    keys.forEach((object) => {
-      dis.push({
-        id: object,
-        author: booklist[0][object][0].author,
-        title: booklist[0][object][0].title,
-        category: booklist[0][object][0].category,
-      });
-    });
-    content = dis.map((book) => (
+    content = booklist.map((book) => (
       <Book
         key={book.id}
         title={book.title}
@@ -52,7 +42,9 @@ const Books = () => {
 
   return (
     <>
-      {content}
+      <div className="booksArea">
+        {content}
+      </div>
       <Form />
     </>
   );

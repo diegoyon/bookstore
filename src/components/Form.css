@@ -39,6 +39,7 @@
   border-radius: 3px;
   padding: 1.18rem 4.375rem;
   border: none;
+  cursor: pointer;
 }
 
 .form-container select {
