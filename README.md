@@ -2,7 +2,7 @@
 
 # Bookstore
 
-> The Bookstore is a website created with React that allows you to: display a list of books, add a book and, remove a selected book.
+> The Bookstore is a website created with React and Redux Toolkit that allows the user to display a list of books, and add or remove a book from an API.
 
 ## Built With
 
